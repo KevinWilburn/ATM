@@ -1,11 +1,14 @@
 const account = require("./account");
+const prompt = require('prompt-sync')();
+const parseInt = require('parse-int');
+const alert = require('alert')
 
 
 function getBalance(){
-    alert(balance)
+    alert(account.bal);
 }
 function withdraw(){
-    let withDrawAmount = prompt(parse.int("how much do you want to withdraw?"));
+    let withDrawAmount = prompt(parseInt("how much do you want to withdraw?"));
     let newBalance = withDrawAmount - balance;
     alert('Your balance is ' + newBalance);
 }

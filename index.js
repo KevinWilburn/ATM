@@ -1,15 +1,17 @@
+const { pinProm } = require('./account');
 const atm = require('./atm');
-const prompt = require('./prompt-sync');
+const prompt = require('prompt-sync')();
+const parseInt = require("parse-int");
+const alert = require('alert');
 
 
-// function startMenu(start){
-//     let start =pin;
-//}
+
 function displayMenuOptionsForUser(){
+    pinProm();
     let displayQuestion = prompt("what do you want to do, get balance, withdraw, deposit, or validate pin? Or exit? ");
     switch(displayQuestion){
         case "get balance":
-            atm.getBal(balance);
+            atm.getBal();
             break;
         case "withdraw":
             atm.wdraw();
